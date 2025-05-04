@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia&family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Tuffy", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    color: #333;
+    /* background-color: #683588;
+    color: #3A7154; */
+}
+
+h1, h2 {
+    font-family: "Sofia", cursive;
+    font-weight: 600;
+    font-style: normal;
+}
+
+h2 {
+    font-weight: 400;
+}
+
+header {
+    box-shadow: 0px 2px 11px 1px rgba(58,113,84,0.75);
+    -webkit-box-shadow: 0px 2px 11px 1px rgba(58,113,84,0.75);
+    -moz-box-shadow: 0px 2px 11px 1px rgba(58,113,84,0.75);
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background-color: #DAF7DC;
+}
+
+header nav img,
+footer img  {
+    width: 100px;
+    height: auto;
+}
+
+.main-nav-title {
+    font-weight: 600;
+}
+
+header nav h2 {
+    color: #683588;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+}
+
+.button-container {
+    display: flex;
+}
+
+.presentation h1 {
+    margin: 1rem 0;
+    color: #683588;
+    font-size: 1.1rem;
+}
+
+.presentation h2 {
+    margin-bottom: 0.5rem;
+    color: #683588;
+    font-size: 1.1rem;
+}
+
+.programme h2 {
+    margin: 1rem 0 0.5rem 0;
+    color: #683588;
+    font-size: 1.1rem;
+}
+
+.programme ul {
+    list-style: none;
+}
+
+.programme li {
+    margin-bottom: 0.5rem;
+}
+
+.programme li span {
+    font-weight: 600;
+}
+
+.card {
+    margin: 1rem auto;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    perspective: 1000px;
+    cursor: pointer;
+    width: 150px;
+    height: 60px;
+    text-align: center;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+}
+
+.card-front {
+    background-color: #3A7154;
+    color: #DAF7DC;
+}
+
+.card-back {
+    background-color: #683588;
+    color: #DAF7DC;
+    transform: rotateY(180deg);
+}
+
+.second-button .card-front {
+    background-color: #683588;
+}
+
+.second-button .card-back {
+    background-color: #3A7154;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background-color: #B0A3D4;
+    box-shadow: 0px -2px 11px 1px rgba(104,53,136,0.75);
+    -webkit-box-shadow: 0px -2px 11px 1px rgba(104,53,136,0.75);
+    -moz-box-shadow: 0px -2px 11px 1px rgba(104,53,136,0.75);
+}
+
+footer img {
+    padding: 0.5rem;
+    background-color: #DAF7DC;
+    border-radius: 50%;
+}
+
+.footer-contact {
+    list-style: none;
+}
+
+.footer-contact p {
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: center;
+}
+
+.footer-contact svg {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 300px) {
+    header nav img,
+    footer img  {
+        width: 50px;
+        height: auto;
+    }
+}
+
+
+@media (min-width: 700px) {
+    main {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1100px) {
+    main {
+        width: 50%;
+    }
+}
